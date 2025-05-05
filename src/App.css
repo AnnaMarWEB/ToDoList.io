@@ -1,0 +1,211 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #26245EFF;
+  background-image: url(./img/reactImg5.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#toDoBoard{
+  width: 80%;
+  height: auto;
+  border: 10px solid #26245EFF;
+  background-color: #E5CAE1;
+  border-radius: 20px;
+  margin: 35px auto;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.list{
+  width: 70%;
+}
+#toDoBoard h1{
+  font-size: 40px;
+  color: #8160A8; 
+  padding-bottom: 20px;
+}
+#add{
+  padding: 10px 20px;
+  border: 2px solid #8160A8;
+  border-radius: 20px;
+  color:  #8160A8;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 1px 3px 5px #8160A8;
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+.todo,
+.change-inout{
+  padding: 10px 20px;
+  border: 2px solid #8160A8;
+  border-radius: 20px;
+  color: #8160A8;
+  font-size: 18px;
+  box-shadow: 1px 3px 5px #8160A8;
+
+}
+.todo::placeholder{
+  color: #8160A8;
+}
+ul{
+  text-align: center;
+  font-size: 30px;
+  color: #8160A8;
+  list-style: none;
+}
+.tasks-img{
+  width: 30%;
+  height: 210px;
+  float: left;
+}
+.checkbox{
+  display: none;
+}
+.fake{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #8160A8;
+}
+.fake::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height:40px;
+  background-image: url(./img/reactImg.png);
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .5s;
+}
+.checkbox:checked + .fake::before{
+  opacity: 1;
+}
+
+label{
+  width: 70%;
+  margin: auto;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8160A8;
+  border-radius: 10px;
+  background-color: #ffffffa8;
+}
+label>*{
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.edit,
+.delete,
+.save{
+  padding: 10px;
+  border: none;
+  color: aliceblue;
+  font-size: 16px;
+  float: right;
+}
+.edit,
+.save{
+  background-color: #8160A8;
+}
+.delete{
+  background-color: #DB3E65FF;
+}
+.edit-text{
+  cursor: pointer;
+}
+ul>p{
+  margin-top: 30px;
+}
+@media only screen and (max-width: 992px){
+  #toDoBoard{
+    width: 90%;
+    padding: 30px;
+    justify-content: center;
+  }
+  .tasks-img{
+    width: 25%;
+    height: 150px;
+  }
+  #toDoBoard h1{
+    font-size: 30px;
+  }
+  .todo,
+  #add,
+  .change-inout{
+    padding: 7px 15px;
+    border: 1px solid #8160A8;
+    font-size: 16px;
+  }
+  ul{
+    font-size: 20px;
+  }
+  label{
+    padding: 5px;
+  }
+  .change-inout{
+    width: 50%;
+  }
+  .edit,
+  .delete,
+  .save{
+    padding: 5px;
+  }
+  .fake{
+    width: 25px;
+    height: 25px;
+  }
+  .fake::before{
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #toDoBoard{
+    width: 95%;
+    flex-wrap: wrap;
+    margin: 15px auto;
+  }
+  .list{
+    width: 100%;
+  }
+  .tasks-img{
+    width: 30%;
+    height: 30%;
+  }
+  #toDoBoard h1{
+    font-size: 20px;
+  }
+  .todo,
+  #add,
+  .change-inout{
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-bottom: 5px;;
+  }
+  .todo{
+    width: 70%;
+  }
+  ul{
+    font-size: 14px;
+  }
+  label{
+    width: 100%;
+  }
+  
+}
